@@ -2,11 +2,11 @@ package vlas.util;
 
 import java.util.Objects;
 
-public class Wheels {
+public class Wheel {
     private String form;
     private int amount;
 
-    public Wheels(String form, int amount) {
+    public Wheel(String form, int amount) {
         this.form = form;
         this.amount = amount;
     }
@@ -31,7 +31,7 @@ public class Wheels {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Wheels wheels = (Wheels) o;
+        Wheel wheels = (Wheel) o;
         return amount == wheels.amount && Objects.equals(form, wheels.form);
     }
 

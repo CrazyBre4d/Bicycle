@@ -3,21 +3,21 @@ package vlas.util;
 import java.util.Objects;
 
 public class Bicycle {
-     private Wheels wheels;
+     private Wheel[] wheels;
      private Frame frame;
      private String type;
 
-     public Bicycle(Wheels wheels, Frame frame, String type){
+     public Bicycle(Wheel[] wheels, Frame frame, String type){
           this.wheels = wheels;
           this.frame = frame;
           this.type = type;
      }
 
-     public Wheels getWheels() {
+     public Wheel[] getWheels() {
           return wheels;
      }
 
-     public void setWheels(Wheels wheels) {
+     public void setWheels(Wheel[] wheels) {
           this.wheels = wheels;
      }
 
