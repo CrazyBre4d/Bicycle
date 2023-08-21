@@ -9,16 +9,16 @@ public class Main {
     public static void main(String[] args) {
     try {
         Bicycle bicycle = null;
-        Wheel[] wheels = null;
+        Wheel[] defaultWheels = null;
         Frame frame = new Frame("aluminium","blue", 2);
 
-        bicycle = new Bicycle(wheels, frame, "sportBike");
+        bicycle = new Bicycle(defaultWheels, frame, "sportBike");
 
-        Wheel wheel1 = new Wheel("oval",3);
-        Wheel wheel2 = new Wheel("square",5);
-        Wheel wheel3 = new Wheel("square",8);
-        Wheel[] wheels1 = new Wheel[]{wheel1,wheel2,wheel3};
-        bicycle.setWheels(wheels1);
+        Wheel wheel_1 = new Wheel("oval",3);
+        Wheel wheel_2 = new Wheel("square",5);
+        Wheel wheel_3 = new Wheel("square",2);
+        Wheel[] wheels = new Wheel[]{wheel_1,wheel_2,wheel_3};
+        bicycle.setWheels(wheels);
 
         System.out.println(bicycle);
     }
