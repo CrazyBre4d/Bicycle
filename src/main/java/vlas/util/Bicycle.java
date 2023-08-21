@@ -8,10 +8,10 @@ public class Bicycle {
      private Frame frame;
      private String type;
 
-     public Bicycle(Wheel[] wheels, Frame frame, String type){
-          this.wheels = wheels;
+     public Bicycle(Wheel[] wheels, Frame frame, String type) throws WheelsException {
           this.frame = frame;
           this.type = type;
+          setWheels(wheels);
      }
      public Bicycle(){}
 
@@ -41,7 +41,6 @@ public class Bicycle {
                throw new WheelsException("The number of wheels does not match the number of holes!");
           }
           }
-
 
      @Override
      public boolean equals(Object o) {
