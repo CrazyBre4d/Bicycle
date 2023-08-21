@@ -2,13 +2,14 @@ package vlas.util;
 
 import java.util.Objects;
 
-public class Wheel {
+public class Wheel{
     private String form;
-    private int amount;
+    private int diameter;
 
-    public Wheel(String form, int amount) {
+
+    public Wheel(String form, int diameter) {
         this.form = form;
-        this.amount = amount;
+        this.diameter = diameter;
     }
 
     public String getForm() {
@@ -19,12 +20,12 @@ public class Wheel {
         this.form = form;
     }
 
-    public int getAmount() {
-        return amount;
+    public int getDiameter() {
+        return diameter;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setDiameter(int diameter) {
+        this.diameter = diameter;
     }
 
     @Override
@@ -32,19 +33,19 @@ public class Wheel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Wheel wheels = (Wheel) o;
-        return amount == wheels.amount && Objects.equals(form, wheels.form);
+        return diameter == wheels.diameter && Objects.equals(form, wheels.form);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(form, amount);
+        return Objects.hash(form, diameter);
     }
 
     @Override
     public String toString() {
-        return "Wheels{" +
+        return "Wheel{" +
                 "form='" + form + '\'' +
-                ", amount=" + amount +
+                ", diameter=" + diameter +
                 '}';
     }
 }

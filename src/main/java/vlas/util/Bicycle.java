@@ -1,5 +1,6 @@
 package vlas.util;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Bicycle {
@@ -53,7 +54,7 @@ public class Bicycle {
      @Override
      public String toString() {
           return "Bicycle{" +
-                  "wheels=" + wheels +
+                  "wheels=" + Arrays.toString(wheels) +
                   ", frame=" + frame +
                   ", type='" + type + '\'' +
                   '}';
