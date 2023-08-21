@@ -11,7 +11,7 @@ public class Wheel{
         this.form = form;
         this.diameter = diameter;
     }
-
+    public Wheel() {}
     public String getForm() {
         return form;
     }

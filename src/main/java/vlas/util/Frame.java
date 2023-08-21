@@ -12,6 +12,7 @@ public class Frame {
         this.color = color;
         this.holes_for_wheels = holes_for_wheels;
     }
+    public Frame(){}
 
     public String getMaterial() {
         return material;
@@ -29,11 +30,11 @@ public class Frame {
         this.color = color;
     }
 
-    public int getHoles_for_wheels() {
+    public int getHolesForWheels() {
         return holes_for_wheels;
     }
 
-    public void setHoles_for_wheels(int holes_for_wheels) {
+    public void setHolesForWheels(int holes_for_wheels) {
         this.holes_for_wheels = holes_for_wheels;
     }
 

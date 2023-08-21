@@ -13,30 +13,35 @@ public class Bicycle {
           this.frame = frame;
           this.type = type;
      }
+     public Bicycle(){}
 
      public Wheel[] getWheels() {
           return wheels;
-     }
-
-     public void setWheels(Wheel[] wheels) {
-          this.wheels = wheels;
      }
 
      public Frame getFrame() {
           return frame;
      }
 
-     public void setFrame(Frame frame) {
-          this.frame = frame;
-     }
-
      public String getType() {
           return type;
+     }
+
+     public void setFrame(Frame frame) {
+          this.frame = frame;
      }
 
      public void setType(String type) {
           this.type = type;
      }
+
+     public void setWheels (Wheel[] wheels) throws WheelsException {
+          this.wheels = wheels;
+          if (wheels.length != frame.getHolesForWheels()) {
+               throw new WheelsException("The number of wheels does not match the number of holes!");
+          }
+          }
+
 
      @Override
      public boolean equals(Object o) {
