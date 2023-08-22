@@ -48,14 +48,10 @@ public class Bicycle {
      }
      public void breakMe() {
           if (wheels != null) {
-               for (int i = 0; i < wheels.length; i++) {
-                    wheels[i] = null;
-               }
+               Arrays.fill(wheels, null);
           }
      }
-     public void madeInBelarus() {
 
-     }
      public void setWheels (Wheel[] wheels) throws WheelsException {
           if (wheels.length != frame.getHolesForWheels()) {
                throw new WheelsException("The number of wheels does not match the number of holes!");
@@ -68,12 +64,12 @@ public class Bicycle {
           if (this == o) return true;
           if (o == null || getClass() != o.getClass()) return false;
           Bicycle bicycle = (Bicycle) o;
-          return Objects.equals(wheels, bicycle.wheels) && Objects.equals(frame, bicycle.frame) && Objects.equals(type, bicycle.type);
+          return Arrays.equals(wheels, bicycle.wheels) && Objects.equals(frame, bicycle.frame) && Objects.equals(type, bicycle.type);
      }
 
      @Override
      public int hashCode() {
-          return Objects.hash(wheels, frame, type);
+          return Objects.hash(Arrays.hashCode(wheels), frame, type);
      }
 
      @Override
