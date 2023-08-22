@@ -10,11 +10,13 @@ public class Main {
     try {
 
         Wheel wheel_1 = new Wheel("oval",3);
-        Wheel wheel_2 = new Wheel("square",5);
-        Wheel wheel_3 = new Wheel("square",2);
+        Wheel wheel_2 = new Wheel("square",3);
+        Wheel wheel_3 = new Wheel("square",3);
         Frame frame = new Frame("aluminium","blue", 2);
 
         Bicycle bicycle = new Bicycle(new Wheel[]{wheel_1,wheel_2}, frame, "sportBike");
+        bicycle.ride();
+        bicycle.breakMe();
 
         System.out.println(bicycle);
     }

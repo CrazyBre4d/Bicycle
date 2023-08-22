@@ -37,11 +37,30 @@ public class Bicycle {
           this.type = type;
      }
 
+     public void ride() throws WheelsException {
+          int expectedDiameter = wheels[0].getDiameter();
+
+          for (Wheel wheel : wheels) {
+               if (wheel.getDiameter() != expectedDiameter) {
+                    throw new WheelsException("All wheels must have the same diameter!");
+               }
+          }
+     }
+     public void breakMe() {
+          if (wheels != null) {
+               for (int i = 0; i < wheels.length; i++) {
+                    wheels[i] = null;
+               }
+          }
+     }
+     public void madeInBelarus() {
+
+     }
      public void setWheels (Wheel[] wheels) throws WheelsException {
-          this.wheels = wheels;
           if (wheels.length != frame.getHolesForWheels()) {
                throw new WheelsException("The number of wheels does not match the number of holes!");
           }
+          this.wheels = wheels;
           }
 
      @Override
