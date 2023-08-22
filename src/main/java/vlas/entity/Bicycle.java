@@ -43,7 +43,7 @@ public class Bicycle {
 
           for (Wheel wheel : wheels) {
                if (wheel.getDiameter() != expectedDiameter | wheel.getDiameter() <= 0 ) {
-                    throw new WheelsException("All wheels must have the same diameter!\n Or diameter must be above zero!");
+                    throw new WheelsException("All wheels must have the same diameter!\nOr diameter must be above zero!");
                }
           }
           System.out.println("ПО ПОЛЯМ \nПО ПОЛЯМ\nСИНИЙ ТРАКТОР ЕДЕТ К НАМ ( велосипед едет )");
