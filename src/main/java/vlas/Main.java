@@ -1,8 +1,8 @@
 package vlas;
 
-import vlas.util.Bicycle;
-import vlas.util.Frame;
-import vlas.util.Wheel;
+import vlas.entity.Bicycle;
+import vlas.entity.Frame;
+import vlas.entity.Wheel;
 import vlas.util.WheelsException;
 
 public class Main {

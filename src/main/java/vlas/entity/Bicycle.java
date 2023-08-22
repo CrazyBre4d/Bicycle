@@ -1,4 +1,6 @@
-package vlas.util;
+package vlas.entity;
+
+import vlas.util.WheelsException;
 
 import java.util.Arrays;
 import java.util.Objects;

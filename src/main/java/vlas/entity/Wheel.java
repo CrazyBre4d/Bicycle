@@ -1,4 +1,4 @@
-package vlas.util;
+package vlas.entity;
 
 import java.util.Objects;
 
