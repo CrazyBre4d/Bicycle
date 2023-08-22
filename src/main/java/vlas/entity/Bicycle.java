@@ -60,6 +60,7 @@ public class Bicycle {
                     throw new IllegalArgumentException("Wheel cannot be null");
                }
           }
+
           if (wheels == null || wheels.length == 0) {
                throw new IllegalArgumentException("Wheels array cannot be null or empty");
           }
@@ -67,6 +68,7 @@ public class Bicycle {
           if (wheels.length != frame.getHolesForWheels()) {
                throw new WheelsException("The number of wheels does not match the number of holes!");
           }
+
           this.wheels = wheels;
           }
           public void what() {
