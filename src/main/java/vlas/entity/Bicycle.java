@@ -10,7 +10,7 @@ public class Bicycle {
      private Frame frame;
      private String type;
 
-     public Bicycle(Wheel[] wheels, Frame frame, String type) throws WheelsException {
+     public Bicycle(Wheel[] wheels, Frame frame, String type) {
           this.frame = frame;
           this.type = type;
           setWheels(wheels);
@@ -37,14 +37,15 @@ public class Bicycle {
           this.type = type;
      }
 
-     public void ride() throws WheelsException {
+     public void ride() {
           int expectedDiameter = wheels[0].getDiameter();
 
           for (Wheel wheel : wheels) {
-               if (wheel.getDiameter() != expectedDiameter) {
-                    throw new WheelsException("All wheels must have the same diameter!");
+               if (wheel.getDiameter() != expectedDiameter | wheel.getDiameter()<0 ) {
+                    throw new WheelsException("All wheels must have the same diameter!\n Or diameter must be above zero!");
                }
           }
+          System.out.println("ПО ПОЛЯМ \nПО ПОЛЯМ\nСИНИЙ ТРАКТОР ЕДЕТ К НАМ ( велосипед едет )");
      }
      public void breakMe() {
           if (wheels != null) {
@@ -52,11 +53,32 @@ public class Bicycle {
           }
      }
 
-     public void setWheels (Wheel[] wheels) throws WheelsException {
+     public void setWheels (Wheel[] wheels) {
+          for (Wheel wheel : wheels) {
+               if (wheel == null) {
+                    throw new IllegalArgumentException("Wheel cannot be null");
+               }
+          }
+          if (wheels == null || wheels.length == 0) {
+               throw new IllegalArgumentException("Wheels array cannot be null or empty");
+          }
+
           if (wheels.length != frame.getHolesForWheels()) {
                throw new WheelsException("The number of wheels does not match the number of holes!");
           }
           this.wheels = wheels;
+          }
+          public void what() {
+          if(wheels.length < 1) {
+               throw new WheelsException("The number of wheels cannot be less than zero");
+          }
+               System.out.print("Bike type: ");
+          switch (wheels.length) {
+               case 1: System.out.println("Monowheel"); break;
+               case 2: System.out.println("Usual bike"); break;
+               case 3: System.out.println("Tricycle"); break;
+               default: System.out.println("Multiwheeled"); break;
+                }
           }
 
      @Override

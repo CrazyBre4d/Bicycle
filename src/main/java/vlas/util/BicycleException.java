@@ -1,6 +1,6 @@
 package vlas.util;
 
-public class BicycleException extends Exception {
+public class BicycleException extends RuntimeException {
     public BicycleException(String message) {
         super(message);
     }

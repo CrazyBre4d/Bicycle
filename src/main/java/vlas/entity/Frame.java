@@ -56,7 +56,7 @@ public class Frame {
         return "Frame{" +
                 "material='" + material + '\'' +
                 ", color='" + color + '\'' +
-                ", holes_for_wheels=" + holesForWheels +
+                ", holesForWheels=" + holesForWheels +
                 '}';
     }
 }
