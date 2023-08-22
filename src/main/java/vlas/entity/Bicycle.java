@@ -38,10 +38,11 @@ public class Bicycle {
      }
 
      public void ride() {
+
           int expectedDiameter = wheels[0].getDiameter();
 
           for (Wheel wheel : wheels) {
-               if (wheel.getDiameter() != expectedDiameter | wheel.getDiameter()<0 ) {
+               if (wheel.getDiameter() != expectedDiameter | wheel.getDiameter() <= 0 ) {
                     throw new WheelsException("All wheels must have the same diameter!\n Or diameter must be above zero!");
                }
           }
